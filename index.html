@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="./album.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Caveat&family=Great+Vibes&family=Satisfy&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+        
+
+        .container {
+            
+            padding: 20px;
+            box-sizing: border-box;
+        }
+       
+
+        .title {
+           
+            margin-bottom: 20px;
+            font-family:'Great Vibes', sans-serif ;
+            color:#3498db;
+            font-size: 100px;
+            text-align: center;
+           
+        }
+       
+       
+        
+        .images {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 20px;
+            align-items: center;
+            justify-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #383b38;
+            border-radius:5px ;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            
+        }
+        
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            color: red;
+        }
+        span{
+            color: aliceblue;
+        }
+     
+               
+               
+          
+    </style>
+    <script>
+        function openLightbox(imgSrc) {
+            var lightbox = document.querySelector('.lightbox');
+            var lightboxImg = lightbox.querySelector('img');
+            lightboxImg.src = imgSrc;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            var lightbox = document.querySelector('.lightbox');
+            lightbox.style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+     
+        <h1 class="title">Gal<span>lery</span></h1>
+       
+     
+        <div class="images">
+            <img class="main" src="./images/berries-2277.jpg" alt="Berries" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/butterflies-1127666.jpg" alt="Butterflies" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/deer-643340.jpg" alt="Deer" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/earth-1756274.jpg" alt="Earth" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/flowers-19830.jpg" alt="Flowers" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/galaxy-3608029.jpg" alt="Galaxy" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/grapes-3550733.jpg" alt="Grapes" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/landscape-1858602.jpg" alt="landscape" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/lotus-1205631.jpg" alt="lotus" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/man-3151723.jpg" alt="man" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/mountain-547363.jpg" alt="mountain" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/pink-324175.jpg" alt="pink" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/strawberries-2960533.jpg" alt="strawberries" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/trees-3822149.jpg" alt="" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/vegetable-skewer-3317060.jpg" alt="vegetable skewer" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/bird-1045954.jpg" alt="vegetable skewer" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/sunrise-1014712.jpg" alt="sunrise-1014712" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/sunset-675847.jpg" alt="sunset-675847" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/sunset-815270.jpg" alt="sunset-815270" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/landscape-8177622.jpg" alt="landscape" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/pink-324175.jpg" alt="pink" onclick="openLightbox(this.src)">
+
+            <img class="main" src="./images/trees-3822149.jpg" alt="trees-3822149" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/horse-1330690.jpg" alt="horse-1330690" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/leopard-515509.jpg" alt="leopard-515509" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/heaven-3335585.jpg" alt="heaven-3335585" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/tree-736885_1920.jpg" alt="tree-736885_1920" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/parrot-3601194.jpg" alt="parrot-3601194" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/owl-50267_1280.jpg" alt="owl-50267_1280" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/ocean-3605547.jpg" alt="ocean-3605547" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/nature-3082832.jpg" alt="nature-3082832" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/mountain-landscape-2031539.jpg" alt="mountain" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/landscape-1858602.jpg" alt="landscape" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/pink-324175.jpg" alt="pink" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/sunset-1373171_1280.jpg" alt="sunset-1373171_1280" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/iceland-1979445.jpg" alt="iceland-1979445" onclick="openLightbox(this.src)">
+            <img class="main" src="./images/iceland-2111811.jpg" alt="iceland-2111811" onclick="openLightbox(this.src)">
+
+        </div>
+    </div>
+    <div class="lightbox">
+        <img src="" alt="">
+        <div class="close" onclick="closeLightbox()">x</div>
+    </div>
+   
+</body>
+</html>
+</html>
